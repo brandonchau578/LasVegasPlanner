@@ -1,42 +1,70 @@
+/* Apply flex layout to body to ensure the full height and width of the page is used */
+/* App.css */
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full viewport height */
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Ensure it uses the full height */
+  width: 100%;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* PageContainer to ensure it uses the full available height after the navbar */
+.PageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: calc(100vh - 60px); /* Adjust height to prevent overlap with navbar (assuming 60px for navbar height) */
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto; /* Ensure scrolling if content overflows */
 }
 
-.card {
-  padding: 2em;
+/* Form styling for CreatePost */
+form {
+  display: flex;
+  flex-direction: column;
+  width: 80%; /* Ensures the form takes up most of the available width */
+  max-width: 600px; /* Restricts form width */
+  margin-top: 20px; /* Add spacing from the navbar */
+  margin-left: 0;
+  margin-right: 0;
 }
 
-.read-the-docs {
-  color: #888;
+/* Input/textarea button styles */
+input, textarea, select, button {
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+input[type="text"], textarea {
+  width: 100%;
+}
+
+textarea {
+  height: 150px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
 }
