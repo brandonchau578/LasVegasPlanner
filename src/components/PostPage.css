@@ -1,65 +1,95 @@
 .post-page {
-    background-color: #F1F1F1; /* Light background for content */
-    color: #333; /* Dark text for readability */
-    padding: 2rem;
-  }
-  
-  .post-page h2 {
-    color: #007BFF;
-  }
-  
-  .post-page p {
-    color: #555;
-  }
-  
-  .post-page button {
-    background-color: #007BFF;
-    color: white;
-    padding: 0.8rem 1.5rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-right: 10px;
-  }
-  
-  .post-page button:hover {
-    background-color: #0056b3;
-  }
-  
-  .post-page form {
-    margin-top: 2rem;
-  }
-  
-  .post-page input[type="text"] {
-    padding: 0.5rem;
-    width: 80%;
-    margin-right: 10px;
-    border: 1px solid #007BFF;
-    border-radius: 4px;
-  }
-  
-  .post-page button[type="submit"] {
-    padding: 0.6rem 2rem;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .post-page button[type="submit"]:hover {
-    background-color: #0056b3;
-  }
-  
-  .post-page ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .post-page li {
-    background-color: #FFF;
-    padding: 0.5rem;
-    margin-bottom: 0.5rem;
-    border-radius: 6px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
+  color: #333; /* Dark text for readability */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.post-page h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.post-page p {
+  color: #555;
+}
+
+.post-page img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.post-page button {
+  background-color: green;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.post-page form {
+  margin-top: 2rem;
+  width: 100%; /* Ensure the form has full width */
+  min-width: 1000px; /* Set a maximum width for the form */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.post-page textarea {
+  padding: 0.5rem;
+  width: 100%; /* Make textarea take up full width */
+  max-width: 100%; /* Ensure the textarea does not overflow */
+  margin: 0.5rem 0;
+  border: 1px solid #007BFF;
+  border-radius: 4px;
+  box-sizing: border-box; /* Ensure padding and borders are included in the element's total width */
+}
+
+.post-page button[type="submit"] {
+  padding: 0.6rem 2rem;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%; /* Make the submit button take up the full width of its parent */
+  max-width: 200px; /* Limit the width of the submit button */
+}
+
+.post-page button[type="submit"]:hover {
+  background-color: rgb(2, 184, 2);
+}
+
+.post-page ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.post-page li {
+  background-color: #FFF;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.post-page .delete-button {
+  background-color: transparent;
+  color: red;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: 1rem;
+}
+
+.post-page .delete-button:hover {
+  text-decoration: underline;
+}

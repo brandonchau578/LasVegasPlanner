@@ -51,8 +51,6 @@ const HomeFeed = ({ posts, searchQuery }) => {
                 </Link>
                 <p>{post.content}</p>
                 <span>{new Date(post.time).toLocaleString()}</span>
-                <span>{post.upvotes} Upvotes</span>
-                {post.imageUrl && <img src={post.imageUrl} alt={post.title} />}
               </li>
             ))
           )}
