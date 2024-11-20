@@ -1,0 +1,80 @@
+.navbar {
+    background-color: #6a0dad; /* Purple background */
+    color: #fff;
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width of the page */
+    z-index: 1;
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    align-items: center;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between; /* Spread content across the navbar */
+    align-items: center;
+    max-width: 80%; /* Limit content to 80% of the page */
+    margin: 0 auto; /* Center the container horizontally */
+  }
+  
+  .navbar-logo {
+    flex: 1;
+  }
+  
+  .navbar-logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .SearchBar {
+    flex: 2; /* Allow the search bar to grow proportionally */
+    max-width: 500px; /* Optional: Restrict the search bar's size */
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .navbar-links {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    flex: 1;
+    justify-content: flex-end; /* Align links to the right */
+  }
+  
+  .navbar-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+  }
+  
+  .navbar-toggle {
+    display: none;
+  }
+  
+  /* Mobile view */
+  @media (max-width: 768px) {
+    .navbar-container {
+      flex-direction: column;
+    }
+  
+    .navbar-links {
+      display: none;
+    }
+  
+    .navbar-links.active {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .navbar-toggle {
+      display: flex;
+      cursor: pointer;
+    }
+  }

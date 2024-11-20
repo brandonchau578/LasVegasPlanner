@@ -1,0 +1,76 @@
+/* Apply styles to body and html for full viewport height */
+/* Apply styles to body and html for full viewport height */
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;  /* Center horizontally */
+  align-items: flex-start;  /* Start vertically at the top */
+  font-family: Arial, sans-serif; /* Optional: adds a clean font */
+  background-color: #f5f5f5; /* Optional: light background for contrast */
+  padding-top: 50px; /* Adjust padding as needed to move down */
+}
+
+/* Form container styles */
+.form {
+  display: flex;
+  flex-direction: column;  /* Stack fields vertically */
+  width: 100%;
+  max-width: 500px;  /* Set max width for form */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  background-color: #fff; /* White background for the form */
+  box-sizing: border-box;
+  margin:10%;
+  
+}
+/* Input fields and textarea styles */
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* Prevent textarea from resizing horizontally */
+textarea {
+  resize: vertical; /* Allow vertical resizing */
+}
+
+/* Focused input fields */
+input:focus, textarea:focus {
+  border-color: #6a0dad; /* Purple border on focus */
+  outline: none;
+}
+
+/* Button styles */
+button {
+  padding: 10px 20px;
+  background-color: #6a0dad;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-top: 10px; /* Space above the button */
+}
+
+/* Hover effect for button */
+button:hover {
+  background-color: #5a0a8a;
+}
+
+/* Heading styles */
+h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}

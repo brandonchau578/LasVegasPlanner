@@ -1,0 +1,140 @@
+/* Ensures the page has a full height and aligns to the top-left corner */
+.home-feed {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Full width of the viewport */
+  height: 100vh; /* Full height of the viewport */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f2f2f2;
+  text-align: left;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-y: auto; /* Allows scrolling if the content exceeds the height */
+  position: fixed; /* Make sure it is fixed to the top-left corner */
+  top: 0;
+  left: 0;
+  margin-top: 60px;
+}
+
+.ContentContainer {
+    display: flex; /* Arrange filters and posts side by side */
+    align-items: flex-start; /* Align both sections to the top */
+    gap: 20px; /* Space between filters and posts */
+    width: 100%;
+    flex-direction: column;
+  }
+/* Ensure the body and html take the full width and height */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Styling for filters section */
+.filters {
+    display: flex;
+    align-items: center; /* Vertically align "Order By" and buttons */
+    gap: 10px; /* Add some space between "Order By" and the buttons */
+    margin-bottom: 20px;
+    padding-top: 3%; /* Reduce padding to bring the section closer to the top */
+    flex-shrink: 0; /* Prevent filters from shrinking */
+    width: 20%;
+    padding-left:10%;
+
+}
+
+.filters h1 {
+margin: 0;
+font-size: 18px; /* Adjust font size for better alignment */
+color: #333;
+}
+
+.filters button {
+padding: 8px 16px; /* Adjust padding for smaller buttons */
+border: 1px solid #ccc; /* Add a subtle border */
+border-radius: 4px; /* Rounded corners */
+background-color: #f9f9f9; /* Light background for buttons */
+color: #333; /* Darker text for contrast */
+font-size: 14px;
+cursor: pointer;
+}
+
+.filters button.active {
+background-color: #4CAF50; /* Highlight active button */
+color: white;
+border: none; /* Remove border for active state */
+}
+
+.filters button:hover {
+background-color: #45a049; /* Darker green on hover */
+color: white; /* Match text color on hover */
+}
+
+/* Styling for the list of posts */
+.post-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  justify-content: center;
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  flex-grow: 1
+}
+
+/* Styling for each post item */
+.post-list li {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s ease;
+  width:80%;
+}
+
+.post-list li:hover {
+  background-color: #f1f1f1;
+}
+
+/* Styling for post title */
+.post-list h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #333;
+  text-decoration: none;
+}
+
+/* Styling for post meta info */
+.post-list p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Styling for the anchor tag */
+.post-list a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Change title color when hovered */
+.post-list a:hover h3 {
+  color: #6a0dad;
+}
+
+.post-list p {
+  margin: 5px 0;
+}
+
+/* Additional styling for the no posts available message */
+.post-list p.no-posts {
+  font-size: 16px;
+  color: #888;
+  text-align: center;
+  margin-top: 50px;
+}
